@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.flamexander.file.manager.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#menuItemExit" text="Вийти із програми"/>
+        </Menu>
+    </MenuBar>
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="5.0">
+        <Button text="Копіювати" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#copyBtnAction"/>
+        <Button text="Видалити" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#deleteBtnAction"/>
+        <Button text="Вийти із програми" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#exitBtnAction"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
+</VBox>
